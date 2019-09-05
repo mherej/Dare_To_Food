@@ -11,7 +11,7 @@ namespace DareToFood.Pages.Restaurants
     {
         public void OnGet()
         {
-
+            /// inserted comments
         }
     }
 }
