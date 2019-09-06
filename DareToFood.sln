@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.779
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DareToFood", "DareToFood\DareToFood.csproj", "{DD45C229-9E06-4F40-A021-C17B7AD622E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DareToFood", "DareToFood\DareToFood.csproj", "{DD45C229-9E06-4F40-A021-C17B7AD622E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DareToFood.Core", "DareToFood.Core\DareToFood.Core.csproj", "{5C2C6D1F-C9AB-4646-ABD0-D83BBDC23F00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DareToFood.Data", "DareToFood.Data\DareToFood.Data.csproj", "{8CF8C9CA-3BD8-43D6-9B14-F61DB9883012}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{DD45C229-9E06-4F40-A021-C17B7AD622E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD45C229-9E06-4F40-A021-C17B7AD622E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD45C229-9E06-4F40-A021-C17B7AD622E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C2C6D1F-C9AB-4646-ABD0-D83BBDC23F00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C2C6D1F-C9AB-4646-ABD0-D83BBDC23F00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C2C6D1F-C9AB-4646-ABD0-D83BBDC23F00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C2C6D1F-C9AB-4646-ABD0-D83BBDC23F00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CF8C9CA-3BD8-43D6-9B14-F61DB9883012}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CF8C9CA-3BD8-43D6-9B14-F61DB9883012}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CF8C9CA-3BD8-43D6-9B14-F61DB9883012}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CF8C9CA-3BD8-43D6-9B14-F61DB9883012}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
