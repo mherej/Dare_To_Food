@@ -5,4 +5,30 @@
 <h1>
     Restaurants 
 </h1>
-@Model.Message;
+<form  method="get">
+    <div class="form-group">
+        <div class="input-group">
+            <input type="search" class="form-control" asp-for="SearchTerm" /><!-- Two Way input/output-->
+            <span class="input-group-btn">
+                <button class="btn btn-default"></button>
+                 <!---i class="glyphicon glyphicon-search" ></!--i-->
+            </span>
+        </div>
+    </div>
+</form>
+<table class="table">
+    @foreach(var rest in Model.Restaurants)
+    {
+        <tr>
+            <td>@rest.Name</td>
+            <td>@rest.Location</td>
+            <td>@rest.Cuisne</td>
+        </tr>
+    }
+
+</table>
+
+
+<div>
+    @Model.Message;
+</div>

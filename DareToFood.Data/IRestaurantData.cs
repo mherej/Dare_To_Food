@@ -1,32 +1,32 @@
 ﻿using DareToFood.Core;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Linq;
 
 namespace DareToFood.Data
 {
     public interface IRestaurantData
     {
-        IEnumerable<Restaurants> GetAll();
+        IEnumerable<Restaurant> GetRestaurantsByName(string name);
     }
-    public class InMemeoryRestauranData : IRestaurantData
+    public class InMemeoryRestaurantData : IRestaurantData
     {
-        readonly List<Restaurants> restaurants;
+        readonly List<Restaurant> restaurants;
 
-        public InMemeoryRestauranData()
+        public InMemeoryRestaurantData()
         {
-            restaurants = new List<Restaurants>()
+            restaurants = new List<Restaurant>()
             {
-                new Restaurants { Id = 1, Name="Jonny's Pizza", Location="Galway", Cuisne = CuisneType.Italian},
-                new Restaurants { Id = 2, Name="Mr.Wong", Location="Galway", Cuisne = CuisneType.Chaineese},
-                new Restaurants { Id = 3, Name="Taco Locos", Location="Galway", Cuisne = CuisneType.Mexican},
-                new Restaurants { Id = 4, Name="Taj Mahal", Location="Galway", Cuisne = CuisneType.Indian},
+                new Restaurant { Id = 1, Name="Jonny's Pizza", Location="Galway", Cuisne = CuisneType.Italian},
+                new Restaurant { Id = 2, Name="Mr.Wong", Location="Galway", Cuisne = CuisneType.Chaineese},
+                new Restaurant { Id = 3, Name="Taco Locos", Location="Galway", Cuisne = CuisneType.Mexican},
+                new Restaurant { Id = 4, Name="Taj Mahal", Location="Galway", Cuisne = CuisneType.Indian},
             };
         }
-        public IEnumerable<Restaurants> GetAll()
+        public IEnumerable<Restaurant> GetRestaurantsByName(string name = null)
         {
+            
             return from r in restaurants
+                   where string.IsNullOrEmpty(name) || r.Name.StartsWith(name)
                    orderby r.Name
                    select r;
         }
