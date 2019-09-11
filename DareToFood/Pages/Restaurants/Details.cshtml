@@ -1,0 +1,18 @@
+﻿@page
+@model DareToFood.Pages.DetailsModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>@Model.Restaurant.Name</h2>
+<div>
+    ID: @Model.Restaurant.Id
+</div>
+
+<div>
+   Location: @Model.Restaurant.Location
+</div>
+<div>
+    Cuisine: @Model.Restaurant.Cuisne
+</div>
+<a asp-page="./List" class="btn btn-default"> All Restaurants </a>
